@@ -3,7 +3,7 @@
     <ion-card>
       <ion-card-title>{{val["id"]}}</ion-card-title>
 
-      <ion-card-content>
+      <ion-card-content [ngClass]="{'azul': useColor, 'rojo': !useColor}">
         {{val["nombre"]}}
       </ion-card-content>
     </ion-card>
