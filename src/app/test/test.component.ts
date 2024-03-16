@@ -25,4 +25,8 @@ export class TestComponent {
 
   useAllSpace: boolean = true;
   useColor: boolean = true;
+
+  onClick() {
+    alert("wow, descubriste algo secreto;)");
+  }
 }

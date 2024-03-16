@@ -1,5 +1,5 @@
 <div class="test-container">
-  <div *ngFor="let val of this.valores" [ngClass]="{'normal-size': !useAllSpace, 'full-size': useAllSpace}" class="general">
+  <div *ngFor="let val of this.valores" [ngClass]="{'normal-size': !useAllSpace, 'full-size': useAllSpace}" class="general" (click)="onClick()">
     <ion-card>
       <ion-card-title>{{val["id"]}}</ion-card-title>
 
