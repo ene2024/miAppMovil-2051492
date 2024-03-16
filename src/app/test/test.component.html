@@ -1,11 +1,12 @@
-<p>Prueba 1</p>
+<div class="test-container">
+  <div *ngFor="let val of this.valores" [ngClass]="{'normal-size': !useAllSpace, 'full-size': useAllSpace}" class="general">
+    <ion-card>
+      <ion-card-title>{{val["id"]}}</ion-card-title>
 
-<div *ngFor="let val of this.valores">
-  <ion-card>
-    <ion-card-title>{{val["id"]}}</ion-card-title>
+      <ion-card-content>
+        {{val["nombre"]}}
+      </ion-card-content>
+    </ion-card>
+  </div>
 
-    <ion-card-content>
-      {{val["nombre"]}}
-    </ion-card-content>
-  </ion-card>
 </div>

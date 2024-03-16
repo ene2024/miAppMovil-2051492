@@ -6,6 +6,7 @@ import {IonicModule} from "@ionic/angular";
   selector: 'app-test',
   templateUrl: 'test.component.html',
   standalone: true,
+  styleUrl: "./test.component.scss",
   imports: [
     NgForOf,
     CommonModule,
@@ -21,4 +22,6 @@ export class TestComponent {
     {id: 2, nombre: "Prueba 2"},
     {id: 3, nombre: "Prueba 3"}
   ]
+
+  useAllSpace: boolean = true;
 }

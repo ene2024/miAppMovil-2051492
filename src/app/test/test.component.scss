@@ -1,0 +1,18 @@
+.general {
+  position: relative;
+}
+
+.test-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.normal-size {
+  width: 20vw;
+}
+
+.full-size {
+  width: 50vw;
+}
