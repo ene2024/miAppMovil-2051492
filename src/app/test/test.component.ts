@@ -25,6 +25,7 @@ export class TestComponent {
 
   useAllSpace: boolean = true;
   useColor: boolean = true;
+  src = "https://i.gifer.com/origin/68/68b376b5408907275c063e2c719fd9d9_w200.gif"
 
   onClick() {
     alert("wow, descubriste algo secreto;)");

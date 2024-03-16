@@ -5,6 +5,8 @@
 
       <ion-card-content [ngClass]="{'azul': useColor, 'rojo': !useColor}">
         {{val["nombre"]}} <!-- Already using string interpolation -->
+        <br>
+        <img [src]="src" alt="imagen">
       </ion-card-content>
     </ion-card>
   </div>
