@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CommonModule, NgForOf} from "@angular/common";
 import {IonicModule} from "@ionic/angular";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-test',
@@ -10,7 +11,8 @@ import {IonicModule} from "@ionic/angular";
   imports: [
     NgForOf,
     CommonModule,
-    IonicModule
+    IonicModule,
+    FormsModule
   ]
 })
 export class TestComponent {
@@ -19,10 +21,10 @@ export class TestComponent {
 
   valores = [
     {id: 1, nombre: "Prueba 1"},
-    {id: 2, nombre: "Prueba 2"},
-    {id: 3, nombre: "Prueba 3"}
+    {id: 2, nombre: "Prueba 2"}
   ]
 
+  title: string = "???";
   useAllSpace: boolean = true;
   useColor: boolean = true;
   src = "https://i.gifer.com/origin/68/68b376b5408907275c063e2c719fd9d9_w200.gif"
