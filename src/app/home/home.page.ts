@@ -13,5 +13,5 @@ import {NgIf} from "@angular/common";
 export class HomePage {
   constructor() {}
 
-  hidTest: boolean = true;
+  hidTest: boolean = false;
 }
