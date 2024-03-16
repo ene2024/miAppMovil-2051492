@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
 import {TestComponent} from "../test/test.component";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, TestComponent],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, TestComponent, NgIf],
 })
 export class HomePage {
   constructor() {}
+
+  hidTest: boolean = true;
 }
