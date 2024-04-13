@@ -1,0 +1,19 @@
+ion-title {
+  font-size: 25px;
+  --background: white;
+  --ion-text-color: black;
+}
+
+.add-btn {
+  --background: #4FFFDF !important;
+  --background-activated: #4FFFDF !important;
+  --background-focused: #4FFFDF !important;
+  --background-hover: #4FFFDF !important;
+  --box-shadow: unset;
+  border-radius: var(--border-radius);
+  border: black 4px dashed;
+  position: relative;
+  margin-top: 150px;
+}
+
+/*# sourceMappingURL=agregar-tarea.component.css.map */

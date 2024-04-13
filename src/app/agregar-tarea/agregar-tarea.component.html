@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center ion-text-lg-left">
+      Agregar Tarea
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list style="margin-bottom: 20px; margin-top: 20px">
+    <ion-item style="margin-bottom: 20px">
+      <ion-label position="stacked">
+        <b><h1>Nombre de la tarea</h1></b>
+      </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item style="margin-bottom: 20px">
+      <ion-label position="stacked">
+        <b><h1>Fecha de finalizacion</h1></b>
+      </ion-label>
+      <ion-datetime-button datetime="datetime" style="margin-top: 10px"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+    <ion-item style="margin-bottom: 20px">
+      <ion-label position="stacked">
+        <b><h1>Descripcion</h1></b>
+      </ion-label>
+      <ion-textarea label-placement="stacked" rows="5">
+      </ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-button class="add-btn" expand="full" size="large">Agregar</ion-button>
+</ion-content>
