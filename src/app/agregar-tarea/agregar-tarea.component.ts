@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {IonicModule} from "@ionic/angular";
 import {FormsModule} from "@angular/forms";
 import {TareasService} from "../tareas.service";
@@ -27,9 +27,20 @@ export class AgregarTareaComponent {
   }
 
   agregarTarea(): void {
+    if (this.tareaForm.name.trim().length == 0) {
+      return;
+    }
+
     this.service.addTareaFromForm(this.tareaForm);
     this.tareaForm = new TareaForm();
     this.router.navigate(['/home']);
+  }
+
+  isValid(dateStr: string): boolean {
+    let date: Date = new Date(dateStr);
+    let now: Date = new Date();
+
+    return date.getUTCMonth() >= now.getUTCMonth() && date.getUTCDate() >= now.getUTCDate() - 1;
   }
 }
 
