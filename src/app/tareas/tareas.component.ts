@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {IonicModule} from "@ionic/angular";
 import {NgForOf} from "@angular/common";
+import {Tarea, TareasService} from "../tareas.service";
 
 @Component({
   selector: 'app-tareas',
@@ -13,35 +14,13 @@ import {NgForOf} from "@angular/common";
   ]
 })
 export class TareasComponent {
+  service: TareasService;
 
-  constructor() {
-    this.tareas = [];
-    this.tareas[0] = (new Tarea("Prueba", new Date()));
-    this.tareas[1] = (new Tarea("Prueba2", new Date()));
-    this.tareas[2] = (new Tarea("Prueba3", new Date()));
+  constructor(service: TareasService) {
+      this.service = service;
   }
 
-  tareas: Tarea[];
-}
-
-class Tarea {
-  private readonly _desc: string;
-  private readonly _date: Date;
-
-  constructor(desc: string, date: Date) {
-    this._desc = desc;
-    this._date = date;
-  }
-
-  get desc(): string {
-    return this._desc;
-  }
-
-  get date(): Date {
-    return this._date;
-  }
-
-  get formattedDate(): string {
-    return this._date.toDateString() + " " +this.date.getHours()+":"+this.date.getMinutes();
+  get tareas() {
+    return this.service.tareas;
   }
 }
