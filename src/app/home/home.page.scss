@@ -8,20 +8,35 @@
   transform: translateY(-50%);
 }
 
-#container strong {
+ion-toolbar {
+  --background: #BB27A7;
+  --ion-border-color: white;
+  --box-shadow: unset;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+ion-title {
   font-size: 20px;
-  line-height: 26px;
+  padding-top: 20px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-content {
+  --ion-background-color: #BB27A7;
 }
 
-#container a {
-  text-decoration: none;
+ion-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.add-btn {
+  --background: #4FFFDF;
+  --background-activated: #4FFFDF;
+  --background-focused: #4FFFDF;
+  --background-hover: #4FFFDF;
+  --box-shadow: unset;
+  border-radius: var(--border-radius);
+  border: black 4px dashed;
 }

@@ -1,19 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      AppMovil
+    <ion-title class="ion-text-center ion-text-lg-left">
+      Mi App de Tareas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <app-test *ngIf="!hidTest"></app-test>
-  </div>
+  <app-tareas></app-tareas>
 </ion-content>
+<ion-fab>
+  <ion-fab-button class="add-btn">
+    +
+  </ion-fab-button>
+</ion-fab>
