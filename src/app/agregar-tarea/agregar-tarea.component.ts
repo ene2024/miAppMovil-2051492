@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicModule} from "@ionic/angular";
+import {IonicModule, ModalController} from "@ionic/angular";
 import {FormsModule} from "@angular/forms";
 import {TareasService} from "../tareas.service";
 import {Router} from "@angular/router";
@@ -20,7 +20,7 @@ export class AgregarTareaComponent {
   service: TareasService;
   router: Router;
 
-  constructor(service: TareasService, router: Router) {
+  constructor(service: TareasService, router: Router, private controller: ModalController) {
     this.service = service;
     this.tareaForm = new TareaForm();
     this.router = router;
@@ -33,7 +33,7 @@ export class AgregarTareaComponent {
 
     this.service.addTareaFromForm(this.tareaForm);
     this.tareaForm = new TareaForm();
-    this.router.navigate(['/home']);
+    this.controller.dismiss();
   }
 
   isValid(dateStr: string): boolean {

@@ -10,7 +10,14 @@
   <app-tareas></app-tareas>
 </ion-content>
 <ion-fab>
-  <ion-fab-button class="add-btn" [routerLink]="['/agregar-tarea']">
+  <ion-fab-button class="add-btn" id="open-modal">
     +
   </ion-fab-button>
+
+  <ion-modal trigger="open-modal">
+    <ng-template>
+      <app-agregar-tarea></app-agregar-tarea>
+    </ng-template>
+  </ion-modal>
+
 </ion-fab>
