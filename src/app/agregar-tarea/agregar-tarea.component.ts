@@ -1,29 +1,19 @@
-import {Component} from '@angular/core';
-import {IonicModule, ModalController} from "@ionic/angular";
-import {FormsModule} from "@angular/forms";
+import { Component } from '@angular/core';
 import {TareasService} from "../tareas.service";
 import {Router} from "@angular/router";
+import {ModalController} from "@ionic/angular";
 
 @Component({
   selector: 'app-agregar-tarea',
   templateUrl: './agregar-tarea.component.html',
-  standalone: true,
   styleUrls: ['./agregar-tarea.component.scss'],
-  imports: [
-    IonicModule,
-    FormsModule
-  ]
 })
 export class AgregarTareaComponent {
 
   tareaForm: TareaForm;
-  service: TareasService;
-  router: Router;
 
-  constructor(service: TareasService, router: Router, private controller: ModalController) {
-    this.service = service;
+  constructor(private service: TareasService, private router: Router, private controller: ModalController) {
     this.tareaForm = new TareaForm();
-    this.router = router;
   }
 
   agregarTarea(): void {
@@ -42,7 +32,9 @@ export class AgregarTareaComponent {
 
     return date.getUTCMonth() >= now.getUTCMonth() && date.getUTCDate() >= now.getUTCDate() - 1;
   }
+
 }
+
 
 export class TareaForm {
 

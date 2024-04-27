@@ -27,7 +27,6 @@ export class TareasService {
 
 }
 
-
 export class Tarea {
   private readonly _name: string;
   private readonly _desc: string;

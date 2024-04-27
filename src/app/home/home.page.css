@@ -1,0 +1,44 @@
+#container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+ion-toolbar {
+  --background: #BB27A7;
+  --ion-border-color: white;
+  --box-shadow: unset;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+ion-title {
+  font-size: 20px;
+  padding-top: 20px;
+  color: white;
+}
+
+ion-content {
+  --ion-background-color: #BB27A7;
+}
+
+ion-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.add-btn {
+  --background: #4FFFDF;
+  --background-activated: #4FFFDF;
+  --background-focused: #4FFFDF;
+  --background-hover: #4FFFDF;
+  --box-shadow: unset;
+  border-radius: var(--border-radius);
+  border: black 4px dashed;
+}
+
+/*# sourceMappingURL=home.page.css.map */
