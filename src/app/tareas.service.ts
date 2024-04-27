@@ -17,6 +17,10 @@ export class TareasService {
     this.tareas.push(tarea);
   }
 
+  deleteTarea(tarea: Tarea) {
+    this.tareas.splice(this.tareas.indexOf(tarea), 1)
+  }
+
   addTareaFromForm(form: TareaForm) {
     this.tareas.push(new Tarea(form.name, form.desc, form.actualDate));
   }
